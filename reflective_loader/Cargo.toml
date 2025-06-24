@@ -1,0 +1,20 @@
+[package]
+name = "reflective-loader"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+airborne-common = { path = "../common" }
+
+[dependencies.windows-sys]
+version = "0.52.0"
+features = [
+    "Win32_Foundation",
+    "Win32_System_Kernel",
+    "Win32_System_Threading",
+    "Win32_System_WindowsProgramming",
+    "Win32_Security_Cryptography"
+]
