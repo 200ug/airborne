@@ -1,6 +1,6 @@
 # Shellcode reflective DLL injection in Rust
 
-For a more comprehensive view into the implementation, check out [this blog post](https://golfed.xyz/posts/understanding-srdi/).
+For a more comprehensive view into the implementation, check out [this blog post](https://dyyni.org/posts/srdi-walkthrough/).
 
 ### Project Structure
 
