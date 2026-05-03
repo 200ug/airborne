@@ -1,8 +1,9 @@
 # Shellcode reflective DLL injection in Rust
 
-For a more comprehensive view into the implementation, check out [this blog post](https://dyyni.org/posts/srdi-walkthrough/).
-
-### Project Structure
+- ~14 kB reflective loader
+- Hashed import names & indirect function calls
+- XOR encrypted payload shellcode
+- Shuffled and delayed IDT iteration (during IAT patching)
 
 ```shell
 .
@@ -12,13 +13,6 @@ For a more comprehensive view into the implementation, check out [this blog post
 ├── reflective_loader   # sRDI implementation
 └── common              # Common XOR and hashing functions
 ```
-
-### Features
-
-- ~14 kB reflective loader
-- Hashed import names & indirect function calls
-- XOR encrypted payload shellcode
-- Shuffled and delayed IDT iteration (during IAT patching)
 
 ### Usage
 
@@ -57,8 +51,12 @@ Usage: poc-injector.exe -p <PROCESS_NAME> -s <SHELLCODE_PATH> -k <KEYFILE_PATH>
     <img src="docs/userfunction-exec.png" alt="Payload's user defined function execution with the modified flag (1)" width="90%">
 </div>
 
-### Credits
+### Extra credits
 
 - Stephen Fewer ([@stephenfewer](https://github.com/stephenfewer)) for reflective DLL injection
 - Nick Landers ([@monoxgas](https://github.com/monoxgas)) for shellcode generator
 - [@memN0ps](https://github.com/memN0ps) for bootstrap shellcode
+
+---
+
+###### Mirrors: [Codeberg](https://codeberg.org/2ug/airborne) / [Github](https://github.com/200ug/airborne)
